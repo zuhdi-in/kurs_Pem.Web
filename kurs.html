@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+      <title>Form Pendaftaran siswa</title>
+      <script type="text/javascript">
+          function konversi(){
+               // mengubah masukan menjadi angka
+              let x = Number(document.getElementById("bil1").value);
+               // untuk mata uang
+              let y = Number(document.getElementById("bil2").value);
+               // mengkonversi
+              let z = x * y;
+               // hasil konversi mata uang yang dikonversi menjadi rupiah
+              document.getElementById("bil3").value=z;
+             }
+
+      </script>
+  </head>
+  <body>
+      <form id="frm1">
+
+          <labe>Masukan Nilai</label>
+              <input type="text" id="bil1" value="0" onchange="konversi()"/>
+
+          <label>Mata Uang</label>
+              <select id="bil2" value="" onchange="konversi()">
+                 <option value="" >--Pilih--</option>
+                 <option value="14189" >Dollar</option>
+                 <option value="16685" >Euro</option>
+                 <option value="10262" >Australian Dollar</option>
+               </select>   
+          <label>Nilai Rupiah</label>
+          <input type="text" id="bil3" value=""/>
+          
+      </form>
+  </body>
+</html>
